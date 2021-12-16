@@ -1,5 +1,5 @@
 #container {
-  margin:0 auto; 
+  margin: auto; 
   width: 1100px; 
   text-align: center;
 
@@ -16,6 +16,7 @@ img {vertical-align: middle;}
   position: relative;
   margin: auto;
 }
+
 
 .text {
   color: #f2f2f2;
@@ -73,10 +74,14 @@ img {vertical-align: middle;}
   .text {font-size: 11px}
 }
 
+
+
+
+
 body {
   margin: 0;
   padding: 0;
-  background:#F3F2EE;
+  background-color:white;
 
 }
 
@@ -93,7 +98,7 @@ p {
 #logo { 
 float: left; 
 padding-right: 300px;
-height: 56px;
+height: 57px;
 }
 nav ul {
   list-style: none;
@@ -194,17 +199,69 @@ nav a.active {
 	width:1780px; 
 	text-align:center;
 }
+section {
+	width:50%;
+	display:block;
+	float:right;
+	height:480px;
+}
+article {
+	width:50%;
+	display:block;
+	float:left;
+	height:600px;
+  text-align:center;
+  margin: auto;
 
+}
+.section1 {
+	width:40%;
+	display:block;
+	float:left;
+	height:600px;
+}
+.section2 {
+	width:50%;
+	display:block;
+	float:right;
+	height:600px;
+}
+.section3{
+        width:40%;
+	display:block;
+	float:left;
+	height:600px;
+}
 
+.article1 {
+	width:50%;
+	display:block;
+	float:right;
+	height:600px;
+}
+.article2 {
+	width:50%;
+	display:block;
+	float:left;
+	height:600px;
+}
+.ads1 img{
+	
+	display:inline-block;
+	width:200px;
+	height:150px;	
+}
 #abtus{
-	margin: 10px;
-	padding: 5px;
+	font-family:Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+	font-size:18px;
+	color:#303030
 }
 
 footer {
-	margin: 10px;
-	padding: 20px;
-
+  text-align:center;
+	padding: 100px;
+  margin: auto;
+  
 }
 hr {
 	border:none;
@@ -213,4 +270,14 @@ hr {
 	height: 1px;
 	width: 95%;
 } 
+.aboutUs-text{
+  position:absolute;
+	bottom:0; 
+	font-size:60px;
+	font-family:Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;  
+	
+	padding:50px 70px;
+	width:1780px; 
+	text-align:left;
+}
 }
