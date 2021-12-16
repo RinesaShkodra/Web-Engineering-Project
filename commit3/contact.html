@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us </title>
+        <link href="CSS/stylecontact.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <header>
+            <a href="#"><img src="images/TasteofRome.png" id="logo" /></a>
+            <nav>
+                <ul>
+                    <li class="home"><a class="active" href="#">Home</a></li>
+                    <li class="about"><a href="about.html">About</a></li>
+                    <li class="contact"><a href="contact.html">Contact</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Our Menu</button>
+                        <div class="dropdown-content">
+                            <a href="Pizza.html">PIZZA</a>
+                            <a href="Pasta.html">PASTA</a>
+                            <a href="Pastries.html">PASTRIES</a>
+                        </div>
+                    </div>
+                    <li class="register"><a href="register.html">Register</a></li>
+                    <li class="register"><a href="login.html">Log In</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr />
+        <div class="contact_right">
+            <div class="contact-form">
+                <h3>Contact Us</h3>
+                <h4>
+                    Fill the areas and contact us. We will respond to you as soon<br />
+                    as possible.
+                </h4>
+                <form name="ContactMe" method="post" action="contact-post.html">
+                    <div>
+                        <span><label>Name</label></span>
+                        <span><input name="userName" type="text" class="textbox" /></span>
+                    </div>
+                    <div>
+                        <span><label>Email</label></span>
+                        <span><input id="email" name="userEmail" type="email" class="textbox" /></span>
+                    </div>
+                    <div>
+                        <span><label>Telephone</label></span>
+                        <span><input name="userPhone" type="text" class="textbox" /></span>
+                    </div>
+                    <div>
+                        <span><label>Comment</label></span>
+                        <span><textarea name="userMsg"> </textarea></span>
+                    </div>
+                    <div>
+                        <span><input type="submit" value="Send message" /></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="company_address">
+            <h3 style="text-align: left;"><i>Our Location</i></h3>
+            <p style="text-align:left;"> <i><small>Bregu i Diellit, p.n.10000 Prishtinë</small></i></p>
+            <br>
+            <h3 style="text-align: left; margin-top: 0%;"><i>Opening Hours</i></h3>
+            <p style="text-align: left;"> <i><small>Monday to Sunday <br> 9:00 AM - 10:00 PM </small></i></p>
+            <br>
+            <h3 style="text-align: left; margin-top: 0%;"><i>Contact Us</i></h3>
+            <p style="text-align: left;"> <i><small>Tel: +381(0)38 554 896 ext.102 <br>  
+              Fax: +381(0)38 542 525 <br> 
+              Follow us: Facebook, Instagram </small></i></p>
+        </div>
+
+        <hr />
+
+        <footer>
+            <h6 style="text-align: center; ">FIND US ON SOCIAL MEDIA<h6></h6>
+              <div style="text-align: center;">
+                  <a href="https://www.facebook.com/" target="_blank"><img src="images/fb_original.jpg" alt="facebook" /></a>
+                  <a href="https:/www.plus.google.com/" target="_blank"> <img src="images/googlep.svg" alt="" /></a>
+                  <a href="https:/www.instagram.com/" target="_blank"><img src="images/insta.jpg" alt="" /></a>
+                  <h5 style="text-align: center; ">Facebook           |       Google           |         Instagram<h5>
+                </div>
+          </footer>
+    </body>
+</html>
