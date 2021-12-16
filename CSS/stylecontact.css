@@ -1,0 +1,249 @@
+
+/*Contact us */
+
+.contact_right {
+	float:left;
+	width: 53%;
+	margin:  5em 0 0 10em;
+	
+}
+
+.center{
+	text-align: center;
+}
+
+.contact_right h3, .contact_right h4{
+	color: #34495E;
+	font-style:italic;
+	font-weight: 550;
+	text-shadow: 0 1px 0 #ffffff;
+}
+.contact-form{
+	position:relative;
+}
+.contact-form div{
+	padding:5px 0;
+}
+.contact-form span{
+	text-transform: capitalize;
+	display: block;
+	color: #bd6819;
+	text-shadow: 0 1px 0 #ffffff;
+	line-height: 2em;
+	font-size: 1em;
+	font-weight: 400;
+}
+.contact-form input[type="text"],.contact-form textarea{
+	font-family: 'Open Sans', sans-serif;
+	padding: 8px;
+	display: block;
+	width: 88%;
+	background: #ffffff;
+	outline: none;
+	color:#bd6819;
+	font-size: 0.8725em;
+	border: 1px solid #bd6819;
+	-webkit-appearance: none;
+}
+.contact-form textarea{
+	resize:none;
+	height:100px;		
+}
+.contact-form input[type="submit"]{
+	-webkit-appearance: none;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	display: inline-block;
+	padding: 14px 22px;
+	font-size: 0.8925em;
+	color: #ffffff;
+	background: #bd6819;
+	text-transform: uppercase;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	margin:  0 4.725em 0 0;
+	
+
+}
+.contact-form input[type="submit"]:hover{
+	background: #34495E;
+}
+
+.restaurant_information{
+	padding-top:8px;
+}
+.restaurant_information p{
+	font-weight: 600;
+	color: #bd6819;
+	text-shadow: 0 1px 0 #ffffff;
+	line-height: 0.725em;
+	font-size: 100;
+}
+.restaurant_informationp a{
+	color: #0b7a63;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.restaurant_information p a:hover{
+	color: #c0c0c0;
+}
+
+
+#email{
+	
+	display: block;
+	color: #bd6819;
+	border-color:#bd6819;
+	text-shadow: 0 1px 0 #ffffff;
+	line-height: 2em;
+	font-size: 1em;
+	font-weight: 350;
+	width: 90%;
+	background: #ffffff;
+	outline: none;
+	color:#bd6819;
+	font-size: 0.8725em;
+	border: 1px solid #bd6819;
+	-webkit-appearance: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #Fff;
+}
+
+#logo { 
+	float: left; 
+	padding-right: 300px;
+	height: 57px;
+}
+nav ul {
+  list-style: none;
+  background-color: #272727;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+ 
+nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+nav a:hover {
+  background-color: #A9A9A9;
+}
+ 
+nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+ 
+@media screen and (min-width: 600px) {
+  nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+  nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+.dropbtn {
+    background-color: #272727;
+    color: white;
+    padding: 16px;
+	font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    font-size: 1.3em;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+	background-color: #A9A9A9
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #A9A9A9;
+}
+.relative{
+	position:relative;
+ 	width:600px;
+}
+.absolute-text{
+	position:absolute;
+	bottom:0; 
+	font-size:80px;
+	font-family:Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;  
+	background:rgba(251, 251, 251, 0.76);
+	padding:30px 60px;
+	width:1780px; 
+	text-align:center;
+}
+
+
+
+
+footer {
+    width:100%;
+    margin:0%;
+    display:block;
+   
+    
+}
+   
+}
+hr {
+	border:none;
+	background-color: #E7E7E7;
+	color: #E7E7E7;
+	height: 1px;
+	width: 95%;
+} 
+
+
+
