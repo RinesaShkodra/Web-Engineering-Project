@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Taste Of Rome</title>
+        <link href="CSS/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <header>
+            <a href="#"><img src="images/TasteofRome.png" id="logo" /></a>
+            <nav>
+                <ul>
+                    <li class="home"><a class="active" href="#">Home</a></li>
+                    <li class="about"><a href="about.html">About</a></li>
+                    <li class="contact"><a href="contact1.html">Contact</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Our Menu</button>
+                        <div class="dropdown-content">
+                            <a href="Pizza.html">PIZZA</a>
+                            <a href="Pasta.html">PASTA</a>
+                            <a href="Pastries.html">PASTRIES</a>
+                        </div>
+                    </div>
+                    <li class="register"><a href="register.html">Register</a></li>
+                    <li class="register"><a href="login.html">Log In</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="relative">
+            <img width="1519" src="images/theme.jpg" />
+            <p class="absolute-text"><i><b> Order tasty Pizza, Pasta & Pastries!</b></i></p>
+        </div>
+
+        <div id="container">
+        <h1><i>Professional at it's finest!</i></h1>
+        <p> Our expert private catering services are headed up by Darryl, a trained chef, 
+            with over 16 years of experience. <br> With only the freshest, locally-sourced, high-end ingredients used
+             throughout our dinner party services and private cooking lessons, our delicious and stunning dishes are certain 
+             to blow you away! <br> Prepared from scratch by our team of highly experienced chefs, 
+              you can be certain that you’re receiving 
+             the specialist care of experts!
+             </p>
+         <hr>
+         
+          <h2><i>Meet Our Chefs</i></h2>
+          <div class="slideshow-container">
+            <hr>
+            <br>
+            <br>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/chef2.jpg" style="width:500px">
+            <div class="text">Chef Darryl</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/chef1.jpg" style="width:500px">
+            <div class="text">Chef Lana</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/chef3.jpg" style="width:500px">
+            <div class="text">Chef Diana</div>
+          </div>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+          
+          <script>
+          var slideIndex = 0;
+          showSlides();
+          
+          function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 3000); // every 3 secs
+          }
+          </script>
+          <br>
+          <br>
+          <br>
+          <hr>
+      
+       
+        <h3 style="text-align: left;"><i>Our Location</i></h3>
+        <p style="text-align:left;"> <i><small>Bregu i Diellit, p.n.10000 Prishtinë</small></i></p>
+        <br>
+        <h3 style="text-align: left; margin-top: 0%;"><i>Opening Hours</i></h3>
+        <p style="text-align: left;"> <i><small>Monday to Sunday <br> 9:00 AM - 10:00 PM </small></i></p>
+        <br>
+        <h3 style="text-align: left; margin-top: 0%;"><i>Contact Us</i></h3>
+        <p style="text-align: left;"> <i><small>Tel: +381(0)38 554 896 ext.102 <br>  
+          Fax: +381(0)38 542 525 <br> 
+          Follow us: Facebook, Instagram </small></i></p>
+  
+      <hr>
+
+      
+     
+        
+       
+        
+          
+      
+
+            <footer>
+              <h6 style="text-align: center; ">FIND US ON SOCIAL MEDIA<h6></h6>
+                <div style="text-align: center;">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="images/fb_original.jpg" alt="facebook" /></a>
+                    <a href="https:/www.plus.google.com/" target="_blank"> <img src="images/googlep.svg" alt="" /></a>
+                    <a href="https:/www.instagram.com/" target="_blank"><img src="images/insta.jpg" alt="" /></a>
+                    <h5 style="text-align: center; ">Facebook           |       Google           |         Instagram<h5>
+                  </div>
+            </footer>
+        </div>
+    </body>
+</html>
