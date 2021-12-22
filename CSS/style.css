@@ -79,7 +79,7 @@ iframe{
 
 }
 .mapi{
-  padding-left: 450px;
+  padding-left: 390px;
 
 }
 
@@ -191,7 +191,7 @@ nav a.active {
     background-color: #A9A9A9;
 }
 .relative{
-	position:rela;
+	position:relative;
 	 width:600px; 
 	
 }
@@ -202,8 +202,8 @@ nav a.active {
 	font-family:Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;  
 	background:rgba(251, 251, 251, 0.76);
 	padding:30px 60px;
-	width:1780px; 
-	text-align:center;
+   width: 1348px;
+	text-align: center;
 }
 section {
 	width:50%;
@@ -216,8 +216,82 @@ section {
 	font-family:Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
 	font-size:18px;
 	color:#303030
+} 
+/* slideri tek about */
+*{
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+
 }
 
+.container-slider2{
+  position: relative;
+}
+.slides {
+  display: none;
+ margin-left: 350px;
+ margin-right: 300px;
+}
+.kursori {
+  cursor: pointer;
+
+}
+.previous,
+.next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: rgb(3, 2, 2);
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.previous:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.tesktiPerNr {
+  color: #0c0b0b;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+.rreshti:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.kolona {
+  float: left;
+  width: 16.66%;
+}
+.kursori {
+  opacity: 0.6;
+}
+.active,
+.kursori:hover {
+  opacity: 1;
+}
+  
+/* slideri tek about-perfundimi */
 footer {
   text-align:center;
 	padding: 100px;
