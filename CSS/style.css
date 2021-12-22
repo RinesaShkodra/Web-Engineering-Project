@@ -211,15 +211,6 @@ section {
 	float:right;
 	height:480px;
 }
-article {
-	width:50%;
-	display:block;
-	float:left;
-	height:600px;
-  text-align:center;
-  margin: auto;
-
-}
 
 #abtus{
 	font-family:Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
