@@ -39,25 +39,31 @@
                 <form name="ContactMe" method="post" action="contact-post.html">
                     <div>
                         <span><label>Name</label></span>
-                        <span><input name="userName" type="text" class="textbox" /></span>
+                        <span><input name="name" type="text" class="textbox" id="name-input" /></span>
+                        <label  id="name-label" style="color: red;"></label>
                     </div>
                     <div>
                         <span><label>Email</label></span>
-                        <span><input id="email" name="userEmail" type="email" class="textbox" /></span>
+                        <span><input name="userEmail" type="email" class="textbox" id="email"  /></span>
+                        <label  id="email-label" style="color: red;"></label>
                     </div>
                     <div>
-                        <span><label>Telephone</label></span>
-                        <span><input name="userPhone" type="text" class="textbox" /></span>
+                        <span><label>Phone Number</label></span>
+                        <span><input name="userPhone" type="text" class="textbox" id="telephone" /></span>
+                        <label  id="tel-label" style="color: red;"></label>
+
                     </div>
                     <div>
                         <span><label>Comment</label></span>
-                        <span><textarea name="userMsg"> </textarea></span>
+                        <span><textarea name="userMsg" type="text" id="comment"> </textarea></span>
+                        <label  id="comment-label" style="color: red;"></label>
+                        <label  id="comment-label2" style="color: rgb(60, 255, 0);"></label>
                     </div>
                     <br>
                     <br>
 
                     <div>
-                        <span><input type="submit" "text-align:center" value="Send message" /></span>
+                        <span><input type="submit" style="text-align:center" value="Send message" id="submit" /></span>
                     </div>
                 </form>
             </div>
@@ -68,9 +74,9 @@
             <p> Location: 1000 Bridgeway, <br> <br>
                 Sausalito, CA 94965, United States
             <p>Fax: +381(0)38 542 525</p>
-            <p>Email: <a href="mailto:touchofR@gmail.com">touchofR@gmail.com</a></p>
-            <p>Follow us: <a href="https://www.facebook.com/" target="blank">Facebook</a>,
-             <a href="https:/www.instagram.com/" target="blank">Instagram</a></p>
+            <p>Email: <a href="mailto:touchofR@gmail.com" style="color: #f18c3f;">touchofR@gmail.com</a></p>
+            <p>Follow us: <a href="https://www.facebook.com/" target="blank" style="color: #f18c3f;">Facebook</a>,
+             <a href="https:/www.instagram.com/" target="blank" style="color: #f18c3f;">Instagram</a></p>
             <br>
         </div>
         <hr>
@@ -88,5 +94,100 @@
             </div>
         </footer>
         
+        <script>
+            var submit= document.getElementById("submit");
+            submit.addEventListener("click",function(event){
+                //validimi per name
+                var nameValid= /^[A-Z][a-z]{2,9}/;
+                var name12=document.getElementById("name-input").value;
+                var nameLabel= document.getElementById("name-label")
+
+                if(name12 == ""){
+                nameLabel.innerHTML="Please fill the name field!";
+                event.preventDefault();
+
+                }
+                else{
+                    if(nameValid.test(name12 ) == true){
+
+                    }
+                    else{
+                        nameLabel.innerHTML="Error";
+                        event.preventDefault();
+                    }
+
+                }  
+            //*validimi per email
+                var emailValid=/^[A-Za-z]+[._-]?\w+[+]?[A-Za-z]+@[A-Za-z]+[-]?[A-Za-z]+\.[A-Za-z]{2,3}/;
+                var email12= document.getElementById("email").value;
+                var emailLabel=document.getElementById("email-label")
+
+                if(email12 == ""){
+                emailLabel.innerHTML="Please fill the email field!";
+                event.preventDefault();
+
+                }
+                else{
+                    if(emailValid.test(email12 ) == true){
+
+                    }
+                    else{
+                        emailLabel.innerHTML="Error";
+                        event.preventDefault();
+                    }
+
+                }
+                //validimi per phone number
+                var telValid=/^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/;
+                var tel12=document.getElementById("telephone").value;
+                var telLabel=document.getElementById("tel-label")
+
+                if(tel12 == ""){
+                telLabel.innerHTML="Please fill the Phone Number field!";
+                event.preventDefault();
+
+                }
+                else if(isNaN(tel12)){
+                    telLabel.innerHTML="Only numbers are allowed!";
+                    event.preventDefault();
+                }
+                else if(tel12.length < 9){
+                    telLabel.innerHTML="Phone Number must be 9 digit!";
+                    event.preventDefault();
+                }
+
+                else{
+                    if(telValid.test(tel12 ) == true){
+
+                    }
+                    else{
+                        telLabel.innerHTML="Error";
+                        event.preventDefault();
+                    }
+
+                }
+                //validimi per comment
+                var commentValid= /^[a-z]{1,50}/;
+                var comment12=document.getElementById("comment").value;
+                var commentLabel=document.getElementById("comment-label");
+                var commentLabel2=document.getElementById("comment-label2");
+
+                if(comment12 == ""){
+                commentLabel.innerHTML="Please fill the Comment field!";
+                event.preventDefault();
+
+                }
+                else{
+                    if(emailValid.test(email12 ) == true){
+                        commentLabel2.innerHTML="Thank you for your comment!";
+
+                    }
+                   
+
+                }
+
+            })
+
+        </script>
     </body>
 </html>
