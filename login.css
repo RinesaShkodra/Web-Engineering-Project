@@ -1,0 +1,86 @@
+
+body{
+	background: url(images/bg-signUp.jpg) no-repeat;
+	background-size: cover;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	font-family: sans-serif;
+}
+.container{
+	width: 300px;
+    padding: 30px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background:rgba(0,0,0,0.6);
+    text-align:center
+}
+.label{
+	color:white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.login_form{
+	padding: 10px 20px;
+}
+.font{
+	font-size: 18px;
+	color: #ffffff;
+	margin: 5px;
+	margin-top: 30px;
+}
+.login_form input{
+	border:0;
+    background:none;
+    display:block;
+    margin:20px auto;
+    text-align:center;
+    border:3px solid orange;
+    padding:14px 10px;
+    width:220px;
+    outline: none;
+    color:white;
+    border-radius:24px;
+    transition:0.25px;
+}
+.login_form input[type="text"]:focus, .login_form input[type="password"]:focus,.box input[type="email"]:focus{
+
+    width:270px;
+    border-color:rgb(146, 10, 6);
+
+}
+
+.login_form button{
+    border:0;
+    background:none;
+    display:block;
+    margin:20px auto;
+    text-align:center;
+    border:3px solid orange;
+    padding:14px 35px;
+    outline: none;
+    color:white;
+    border-radius:24px;
+    transition:0.25px;
+    cursor:pointer;
+}
+.login_form button:hover{
+	background: #d88a14;
+}
+.login_form #email_error,
+.login_form #pass_error{
+	margin-top: 5px;
+	width: 270px;
+	font-size: 18px;
+	color: #C62828;
+	background: rgba(255,0,0,0.1);
+	text-align: center;
+	padding: 5px 8px;
+	border-radius: 3px;
+	border: 1px solid #EF9A9A;
+	display: none;
+}
+
+
