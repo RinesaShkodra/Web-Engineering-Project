@@ -1,7 +1,7 @@
 
 body{
-	background: url(images/bg-signUp.jpg) no-repeat;
-	background-size: cover;
+	background: url(images/bg-signUp.jpg);
+	background-size: 100vw;
 	align-items: center;
 	justify-content: center;
 	display: flex;
