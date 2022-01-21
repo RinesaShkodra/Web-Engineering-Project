@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Order Form</title>
+        <link href="CSS/orderform.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul style="width:100vw;">
+                    <li class="home"><a href="index.html">Home</a></li>
+                    <li class="about"><a href="about.html">About</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn"> Order Info</button>
+                        <div class="dropdown-content">
+                            <a href="Foods.html">Foods</a>
+                            <a href="Categories.html">Categories</a>
+                            <a href="order.html">Order</a>
+                        </div>
+                        </div>
+                        <li class="register"><a href="register.html">Register</a></li>
+                        <li class="login"><a href="login.html">Log In</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+        <section class="backround">
+            <div class="container">
+                
+                <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
+    
+                <form action="#" class="order">
+                    <fieldset>
+                        <legend>Selected Food</legend>
+    
+                        <div class="food-menu-img">
+                            <img src="images/menu-pizza.jpg" alt="Chicken Pizza" class="img-responsive img-curve">
+                        </div>
+        
+                        <div class="food-menu-desc">
+                            <h3>Food Title</h3>
+                            <p class="food-price">$2.3</p>
+    
+                            <div class="order-label">Quantity</div>
+                            <input type="number" name="qty" class="input-responsive" value="1" required>
+                            
+                        </div>
+    
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Delivery Details</legend>
+                        <div class="order-label">Full Name</div>
+                        <input type="text" name="full-name" placeholder="Full Name" class="input-responsive" required>
+    
+                        <div class="order-label">Phone Number</div>
+                        <input type="tel" name="contact" placeholder="Ex. 1234xxxxxx" class="input-responsive" required>
+    
+                        <div class="order-label">Email</div>
+                        <input type="email" name="email" placeholder="Ex. example@gmail.com" class="input-responsive" required>
+    
+                        <div class="order-label">Address</div>
+                        <textarea name="address" rows="10" placeholder="Ex. Street, City, Country" class="input-responsive" required></textarea>
+    
+                        <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
+                    </fieldset>
+    
+                </form>
+    
+            </div>
+        </section>
+    </body>
+</html>

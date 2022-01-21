@@ -78,29 +78,6 @@
 	background: #34495E;
 }
 
-.restaurant_information{
-	padding-top:8px;
-}
-.restaurant_information p{
-	font-weight: 600;
-	color: #bd6819;
-	text-shadow: 0 1px 0 #ffffff;
-	line-height: 0.725em;
-	font-size: 100;
-}
-.restaurant_informationp a{
-	color: #0b7a63;
-	cursor: pointer;
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-.restaurant_information p a:hover{
-	color: #c0c0c0;
-}
-
-
 #email{
 	
 	display: block;
@@ -125,11 +102,7 @@ body {
   background: #Fff;
 }
 
-#logo { 
-	float: left; 
-	padding-right: 300px;
-	height: 57px;
-}
+
 nav ul {
   list-style: none;
   background-color: #272727;
@@ -232,8 +205,6 @@ footer {
     width:100%;
     margin:0%;
     display:block;
-   
-    
 }
    
 }
