@@ -83,13 +83,11 @@
         
         if($res==true)
         {
-            //Admin Updated
             $_SESSION['update'] = "<div class='success'>Admin Updated Successfully.</div>";
             header('location:'.SITEURL.'admin/manage-admin.php');
         }
         else
         {
-            //Failed to Update 
             $_SESSION['update'] = "<div class='error'>Failed to Delete Admin.</div>";
             header('location:'.SITEURL.'admin/manage-admin.php');
         }
