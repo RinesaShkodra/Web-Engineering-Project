@@ -73,7 +73,7 @@ table tr td{
 }
 
 
-/* CSS for Menu */
+/*  Menu */
 .menu{
     border-bottom: 1px solid grey;
 }
@@ -102,7 +102,7 @@ table tr td{
     float: left;
 }
 
-/* CSS for Login */
+/* Login */
 .login{
     border: 1px solid grey;
     width: 20%;

@@ -1,27 +1,26 @@
 <?php include('partials/menu.php'); ?>
 
 
-        <!-- Main Content Section Starts -->
         <div class="main-content">
             <div class="wrapper">
                 <h1>Manage Admin</h1>
 
-                <br />
+                <br>
 
                 <?php 
                     if(isset($_SESSION['add']))
                     {
-                        echo $_SESSION['add']; //Displaying Session Message
-                        unset($_SESSION['add']); //REmoving Session Message
+                        echo $_SESSION['add']; //show Session Message
+                        unset($_SESSION['add']); //Remove Session Message
                     }
 
                 ?>
                 <br><br><br>
 
-                <!-- Button to Add Admin -->
+               
                 <a href="add-admin.php" class="btn-primary">Add Admin</a>
 
-                <br /><br /><br />
+                <br><br><br>
 
                 <table class="tbl-full">
                     <tr>
@@ -41,29 +40,27 @@
                         $res = mysqli_query($conn, $sql);
                         
 
-                        //CHeck whether the Query is Executed of Not
+                        //Query is Executed of Not
                         if($res==TRUE)
                         {
-                            // Count Rows to CHeck whether we have data in database or not
-                            $count = mysqli_num_rows($res); // Function to get all the rows in database
+                            // check if we have data in db
+                            $count = mysqli_num_rows($res); // get all the rows in db
 
-                            $sn=1; //Create a Variable and Assign the value
+                            $sn=1; //shto vlere
 
-                            //CHeck the num of rows
+                            //nr i rows
                             if($count>0)
                             {
-                                //WE HAve data in database
-                                while($rows=mysqli_fetch_assoc($res))
+                                //ka data ne db
+                                while($rows=mysqli_fetch_assoc($res)) //while loop to get data from db, it will run perderi sa kemi data ne db
                                 {
-                                    //Using While loop to get all the data from database.
-                                    //And while loop will run as long as we have data in database
 
                                     //Get individual DAta
                                     $id=$rows['id'];
                                     $full_name=$rows['full_name'];
                                     $username=$rows['username'];
 
-                                    //Display the Values in our Table
+                                    //display values 
                                     ?>
                                     
                                     <tr>
@@ -83,14 +80,10 @@
                             }
                             else
                             {
-                                //We Do not Have Data in Database
+                                //no data in db
                             }
                         }
-
                     ?>
-
-
-                    
                 </table>
 
             </div>
