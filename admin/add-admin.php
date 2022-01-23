@@ -62,7 +62,7 @@ if(isset($_POST['submit'])){
 
   
    //resolve, true or false
-   $conn = mysqli_connect('localhost:3325', 'root', "") or die (mysqli_error()); //db connect
+   $conn = mysqli_connect('localhost', 'root', "") or die (mysqli_error()); //db connect
    $db_select = mysqli_select_db($conn,'food-order') or die (mysqli_error()); //select db
 
  // execute QUERY and SAVE DATA in db

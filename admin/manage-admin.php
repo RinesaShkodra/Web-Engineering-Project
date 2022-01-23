@@ -62,7 +62,7 @@
                         //Query to Get all Admin
                         $sql = "SELECT * FROM tbl_admin";
                         //Execute the Query
-                        $conn = mysqli_connect('localhost:3325', 'root', "") or die (mysqli_error()); //db connect
+                        $conn = mysqli_connect('localhost', 'root', "") or die (mysqli_error()); //db connect
                         $db_select = mysqli_select_db($conn,'food-order') or die (mysqli_error());
                         $res = mysqli_query($conn, $sql);
                         
