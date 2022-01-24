@@ -90,6 +90,11 @@
                 
                     $image_name = $_FILES['image']['name'];
 
+                    //upload the image only if image is selected
+                    if($image_name != ""){
+
+                    
+
                     // get the extension (jpg, png, gif)
                     $ext = end(explode('.', $image_name));
 
@@ -112,7 +117,7 @@
                         die();
                     }
 
-
+                    }
 
                 }
                 else{
