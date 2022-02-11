@@ -67,7 +67,7 @@ include ('partials/menu.php');
                                <?php 
                                     //check if we have the image or not
                                     if($image_name == ""){
-                                          echo "<div class = 'error'> Image not added</div>"
+                                          echo "<div class = 'error'> Image not added</div>";
                                     }
                                     else{
                                           //display the image
@@ -98,7 +98,7 @@ include ('partials/menu.php');
 
             
               
-              ?>
+            ?>
             
       </table> 
 

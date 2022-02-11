@@ -5,17 +5,20 @@
          <h1>Add Food</h1>
          <br>
          <br>
-         <?php
+         
+         <?php 
+
          if(isset($_SESSION['upload'])){
+
             echo $_SESSION['upload'];
             unset($_SESSION['upload']);
+
+
          }
-         
-         
          
          ?>
 
-         <form action="" method="POST " enctype="multipart/form-data">
+         <form action="" method="POST" enctype="multipart/form-data">
             <table class="tbl-30">
                 <tr>
                     <td>Title: </td>
@@ -45,20 +48,22 @@
                     <td>Category</td>
                     <td>
                         <select name="category">
-                            
+
                             <?php
                             //display categories from database
                             //create SQL to get all active categories from database
                             $sql= "SELECT * FROM tbl_category WHERE active ='Yes'";
 
                             $res= mysqli_query($conn, $sql);
-                            
+
                             //counting rows to check if we have categories or not
                             $count=mysqli_num_rows($res);
+
                             if($count>0){
 
 
-                                while($row=mysqli_fetch_assoc($res)){
+                                while($row =mysqli_fetch_assoc($res)){
+
                                     $id= $row['id'];
                                     $title=$row['title'];
 
@@ -75,7 +80,7 @@
                                 <option value="0">No Category Found</option>
                                 <?php
                             }
-                            
+
                             ?>
                         </select>
                     </td>
@@ -100,83 +105,86 @@
                     </td>
                 </tr>
 
-            
+
             </table>
          </form>
 
         <?php
+        
+        //
         if(isset($_POST['submit'])){
+           // echo "clicked";
+
             //get the data from form
+            $title = $_POST['title'];
+            $description = $_POST['description'];
+            $price = $_POST['price'];
+            $category = $_POST['category'];
 
-            $title=$_POST['title'];
-            $description=$_POST['description'];
-            $price=$_POST['price'];
 
-            $category= $_POST['post'];
-            
-
-            //checking if the radio active and featured are selected or not
-            if(isset($_POST['featured'])){
-
-                $featured= $_POST['featued'];
+            //check the radio buttons 
+            if(isset($_POST['featured']))
+            {
+                $featured = $_POST['featured'];
+            }else{
+                $featured = "No"; //by default
             }
-            else{
-                $featured="No"; //by default
-            }
+
+            //for active
+
             if(isset($_POST['active'])){
 
-                $active=$_POST['active'];
+                $active = $_POST['active'];
             }
             else{
-
-                $active="No"; //by default
+                $active = "No"; //by default
             }
 
+
             //upload the image if selected
+            if(isset($_FILES['image']['name'])){
 
-            if(isset($_FILES['image']['name '])){
-
+                //get the details of the image
                 $image_name = $_FILES['image']['name'];
 
-                if($image_name !=""){
+                //upload image only if selected
+                if($image_name!=""){
                     //image is selected
 
                     //rename the image
-                    $ext= end(explode('.', $image_name));
+                    $ext = end(explode('.', $image_name));
+
 
                     //create new name for image
-
                     $image_name = "Food-Name-".rand(0000,9999).".".$ext;
 
+                    //upload the image
                     //get the source path and destination path
 
-                    $src= $_FILES['image']['tmp_name'];
+                    $src = $_FILES['image']['tmp_name'];
 
                     $dst = "../images/food/".$image_name;
 
-                    //upload the image
-                    $upload= move_uploaded_file($src, $dst); 
+                    $upload = move_uploaded_file($src, $dst);
 
+                    //check if the image uploaded or not
+                    if($upload == false){ 
 
-                    if($upload == false){
-
-                        //redirect to Add food page with a message
-                        $_SESSION['upload']= "<div class ='error'> Failed to upload image</div>";
-
+                        $_SESSION['upload'] = "<div class = 'error'> Failed to upload Image. </div>";
                         header('location:'.SITEURL.'admin/add-food.php');
-
-                        //stop the process 
                         die();
+
                     }
 
                 }
-            }
 
+            }
             else{
-                $image_name=""; //blank by default
+                //defaul value as blank
+                $image_name = "";
             }
 
-            //create SQL query to save or add food
+            //query to save or add food
             $sql2="INSERT INTO tbl_food SET 
                 title = '$title',
                 description = '$description',
@@ -190,26 +198,28 @@
             //execute the query
             $res2 = mysqli_query($conn, $sql2);
 
-            //redirect to Manage Food page
+            //check whether data inserted or not
             if($res2 == true){
-                $_SESSION['add'] = "<div class= 'success'>Food Added Successfully. </div>";
+
+                $_SESSION['add'] = "<div class = 'success'> Food added successfully. </div>";
                 header('location:'.SITEURL.'admin/manage-food.php');
+
             }
             else{
-                $_SESSION['add'] = "<div class= 'error'>Failed to Add Food. </div>";
+                $_SESSION['add']= "<div class = 'error'> Failed to add food. </div>";
                 header('location:'.SITEURL.'admin/manage-food.php');
             }
 
-        }
 
-         
-         
+        }
+        
         ?>
 
+    
 
      </div>
  </div>
 
 
 
-<?php  include('partials/footer.php'); ?> 
+<?php  include('partials/footer.php'); ?>
