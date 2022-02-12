@@ -20,8 +20,9 @@
                             <a href="order.php">Order</a>
                         </div>
                         </div>
-                        <li class="register"><a href="register.html">Register</a></li>
-                        <li class="login"><a href="login.html">Log In</a></li>
+                        <li class="register"><a href="register.php">Register</a></li>
+                        <li class="login"><a href="login.php">Log In</a></li>
+                        <li class="register"><a href="logout.php">Log Out</a></li>
                     </div>
                 </ul>
             </nav>

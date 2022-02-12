@@ -87,6 +87,8 @@
 
                 <tr>
                     <td>costumer Name: </td>
+
+                    
                     <td>
                         <input type="text" name="costumer_name" value="<?php echo $costumer_name; ?>">
                     </td>

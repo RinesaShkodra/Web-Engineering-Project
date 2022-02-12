@@ -251,67 +251,6 @@ flex-wrap: 4;
 	color:#303030
 }
 
-/* slideri tek about */
-
-*{
-  box-sizing: border-box;
-}
-
-img {
-  vertical-align: middle;
-}
-
-.container-slider2{
-  position: relative;
-}
-.slides {
-  display: none;
- width: 100vw;
-}
-.kursori {
-  cursor: pointer;
-
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.previous:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.tesktiPerNr {
-  color: #0c0b0b;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-.rreshti:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.kolona {
-  float: left;
-  width: 16.66%;
-}
-.kursori {
-  opacity: 0.6;
-}
-.active,
-.kursori:hover {
-  opacity: 1;
-}
-  
-/* slideri tek about-perfundimi */
 
 footer {
   text-align:center;

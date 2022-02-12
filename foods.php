@@ -23,6 +23,7 @@
                         </div>
                     <li class="register"><a href="register.html">Register</a></li>
                     <li class="register"><a href="login.html">Log In</a></li>
+                    <li class="register"><a href="logout.php">Log Out</a></li>
                 </ul>
             </nav>
         </header>
