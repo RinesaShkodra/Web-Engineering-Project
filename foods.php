@@ -1,4 +1,5 @@
 <?php include('config/constants.php');?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,11 +14,11 @@
                     <li class="home"> <a href="<?php echo SITEURL; ?>index.php" >  Home</a></li>
                     <li class="about"><a href="<?php echo SITEURL; ?>about.php">About</a></li>
                     <div class="dropdown">
-                        <button class="dropbtn"><a class="active" href="Pizza.html"></a>Order Info</button>
+                        <button class="dropbtn"><a class="active" ></a>Order Info</button>
                         <div class="dropdown-content">
                             <a href="<?php echo SITEURL; ?>foods.php">Foods</a>
                             <a href=" <?php echo SITEURL; ?>categories.php"> Categories</a>
-                            <a href="order.html">Order</a>
+                            <a href="order.php">Order</a>
                             </div>
                         </div>
                     <li class="register"><a href="register.html">Register</a></li>
@@ -26,10 +27,8 @@
             </nav>
         </header>
 
-        
-        <div class="clearfix"></div>
-    </div>
-</section>
+
+
 
 
 <section class="food-search text-center">
@@ -95,7 +94,7 @@
                             </p>
                             <br>
 
-                         <a href="#" class="btn btn-primary">Order Now</a>
+                         <a href="<?php echo SITEURL;?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
                         </div>
                     </div>
 

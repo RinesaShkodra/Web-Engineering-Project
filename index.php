@@ -19,7 +19,7 @@
                         <div class="dropdown-content">
                             <a href="<?php echo SITEURL; ?>foods.php">Foods</a>
                             <a href=" <?php echo SITEURL; ?>categories.php"> Categories</a>
-                            <a href="order.html">Order</a>
+                            <a href="order.php">Order</a>
                         </div>
                       </div>
                         <li class="register"><a href="register.html">Register</a></li>
