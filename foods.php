@@ -59,6 +59,7 @@
             if($count > 0){
 
                 while($row=mysqli_fetch_assoc($res)){
+
                    //get the values
                    $id =$row['id'];
                    $title = $row['title'];
@@ -71,7 +72,7 @@
                         <div class="food-menu-img">
                             <?php
                             //check if the image is available or not
-                                if($image_name=""){
+                                if($image_name==""){
                                     echo "<div class= 'error'>Image not Available!</div>";
 
                                 }
@@ -88,7 +89,7 @@
 
                         <div class="food-menu-desc">
                             <h4><?php echo $title; ?></h4>
-                            <p class="food-price"><?php echo $price; ?></p>
+                            <p class="food-price">$<?php echo $price; ?></p>
                             <p class="food-detail">
                              <?php echo $description; ?>
                             </p>
@@ -109,24 +110,12 @@
                 echo "<div class='error'>Food not found!</div>";
             }
             
-            
-            
-            ?>
-
-        
+            ?>   
             <div class="clearfix"></div>
-
-            
-
         </div>
 
     </section>
     <!-- fOOD Menu Section Ends Here -->
-
-
-       
-
-
             <footer>
                 <div>
                     <h6 style="text-align: center; ">FIND US ON SOCIAL MEDIA<h6>

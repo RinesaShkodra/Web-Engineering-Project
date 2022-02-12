@@ -11,13 +11,29 @@ include ('partials/menu.php');
               <!-- button to add admin-->
              <a href="<?php echo SITEURL;?>admin/add-food.php " class="btn-primary"> Add Food </a>
 
-            <br><br>
+            <br><br> <br> <br>
             <?php
             if(isset($_SESSION['add']))
             {
                   echo $_SESSION['add'];
                   unset($_SESSION['add']);
             }
+            if(isset($_SESSION['delete']))
+            {
+                  echo $_SESSION['delete'];
+                  unset($_SESSION['delete']);
+            }
+            if(isset($_SESSION['upload']))
+            {
+                  echo $_SESSION['upload'];
+                  unset($_SESSION['upload']);
+            }
+            if(isset($_SESSION['unauthorized']))
+            {
+                  echo $_SESSION['unauthorized'];
+                  unset($_SESSION['unauthorized']);
+            }
+
             
             ?>
 
@@ -58,10 +74,10 @@ include ('partials/menu.php');
                         ?>   
 
                         <tr>
-                          <td>1.</td>
-                              <td><?php echo $sn++;?></td>
+                          
+                              <td><?php echo $sn++;?>.</td>
                               <td><?php echo $title ;?></td>
-                              <td><?php echo $price ;?></td>
+                              <td>$<?php echo $price ;?></td>
 
                               <td> 
                                <?php 
@@ -72,7 +88,7 @@ include ('partials/menu.php');
                                     else{
                                           //display the image
                                            ?>
-                                          <img src=" <?php echo SITEURL; ?> images/food/<?php echo $image_name ;?>" width ="100px" >
+                                          <img src=" <?php echo SITEURL; ?>images/food/<?php echo $image_name ;?>" width ="100px" >
                                           <?php 
                                     }
                               
@@ -82,8 +98,8 @@ include ('partials/menu.php');
                               <td><?php echo $featured ;?></td>
                               <td><?php echo $active ;?></td>
                               <td>
-                              <a href="#" class="btn-secondary"> Update Food </a>
-                              <a href="#" class="btn-danger"> Delete Food </a>
+                              
+                              <a href="<?php echo SITEURL;?>admin/delete-food.php?id=<?php echo $id;?>&image_name=<?php echo $image_name;?>" class="btn-danger"> Delete Food </a>
                          </td>
                         </tr>        
               

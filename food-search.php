@@ -81,7 +81,7 @@
                                 <div class="food-menu-img">
                                 <?php
                                    //check if the image is available or not
-                                if($image_name=""){
+                                if($image_name==""){
                                     echo "<div class= 'error'>Image not Available!</div>";
 
                                 }
